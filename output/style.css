@@ -1,0 +1,123 @@
+html, body {
+	height: 100%;
+	margin: 1em;
+	scroll-behavior: smooth;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: mono;
+	font-size: 16px;
+}
+
+.toc-wrap {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 300px;
+	height: 100%;
+	overflow: auto;
+}
+.toc {
+	margin: 0;
+	padding: 0;
+}
+.toc-wrap h2 {
+	padding-left: 2rem;
+}
+.toc a {
+	display: block;
+	padding: 2px 5px 1px 2rem;
+	margin-bottom: 3px;
+}
+
+[data-type] {
+}
+
+[data-type="Label"] {
+	background-color: yellow;
+	color: #181818;
+}
+
+[data-type="Branch"] {
+	background-color: #00f;
+	color: white;
+	text-decoration: none;
+}
+
+[data-type="Opcode"],
+[data-type="Directive"],
+[data-type="Macro/Inline Function"] {
+	background-color: #181818;
+	color: white;
+	cursor: help;
+}
+
+[data-type="Comment"] {
+	background-color: #efefef;
+	color: #282828;
+}
+
+pre {
+	font-family: mono;
+	line-height: 1.5;
+	padding: 0;
+	margin: 0;
+}
+
+pre code > span {
+	display: inline-block;
+	counter-increment: line;
+}
+pre code > span:before {
+	content: counter(line);
+	display: inline-block;
+	width: 40px;
+	padding-right: 1rem;
+	margin-right: 1rem;
+	text-align: right;
+	font-size: 0.75rem;;
+}
+
+.options {
+	display: inline-block;
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	width: 40px;
+}
+.options button {
+	display: inline-block;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+code span.hide {
+	display: none;
+}
+
+body.night {
+	background: #293133;
+	color: white;
+}
+
+body.night [data-type="Opcode"] {
+	background-color: #efefef;
+	color: #181818;
+}
+
+body.night [data-type="Comment"] {
+	background-color: #373f43;
+	color: #efefef;
+}
+
+body.night [data-type="Comment"] {
+	background-color: #373f43;
+	color: #efefef;
+}
+
+body.night pre code > span:before {
+}
